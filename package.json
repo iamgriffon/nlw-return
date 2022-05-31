@@ -1,0 +1,24 @@
+{
+  "name": "nlw-return",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev:mobile": "yarn workspace @nlw-return/mobile start",
+    "dev:web": "yarn workspace @nlw-return/web dev",
+    "build": "cd packages/next && yarn build",
+    "deploy": "vercel --prod --no-clipboard",
+    "postinstall": "patch-package"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "author": "Gustavo Dupin <gustavo@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.1",
+  "devDependencies": {
+    "patch-package": "^6.4.7"
+  }
+}
